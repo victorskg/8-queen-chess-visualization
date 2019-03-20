@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Visualizador 8-Rainhas</title>
+    <script src="js/chessboard-0.3.0.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css" />
+</head>
+
+<body>
+    <h1 style="text-align: center">8-Rainhas</h1>
+    <div id="board" style="width: 400px; margin: 0 auto"></div>
+
+    <script type="text/javascript">
+        let line = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+        let path = [3,	8,	4,	7,	1,	6,	2,	5];
+        var cfg = {
+            position: {}
+        };
+        for (let index = 0; index < path.length; index++) {
+            cfg.position[line[index]+path[index]] = "wK"
+        }
+
+        var board = ChessBoard("board", cfg);
+    </script>
+</body>
+
+</html>
